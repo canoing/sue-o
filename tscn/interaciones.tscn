@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc0l0ymlc0dsa"]
+
+[ext_resource type="Script" path="res://script/interacion_gb.gd" id="1_y8h51"]
+
+[node name="interaciones" type="Node"]
+script = ExtResource("1_y8h51")

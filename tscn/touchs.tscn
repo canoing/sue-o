@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://gr0kjyf0ju5q"]
+
+[ext_resource type="Script" path="res://script/touchs.gd" id="1_xjwdo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_34h1w"]
+size = Vector2(48, 138.086)
+
+[node name="touchs" type="Area2D"]
+script = ExtResource("1_xjwdo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_34h1w")
+debug_color = Color(0, 0.643137, 0.305882, 0.419608)
