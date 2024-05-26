@@ -1,18 +1,22 @@
 extends Sprite2D
 
+#aqui pasa la cosa de sueños eso
+@onready  var dormi = get_node("ColorRect")
+var sleep = Dormi
 
-@onready var dormi = get_node("ColorRect")
-func _ready():
-	pass # Replace with function body.
 
 
 
 func _process(delta):
-	if dormi.color.a <= 1:
-		dormi.color.a += 0.025 * delta
+	# se va durmirdo
+	dormi.color.a = sleep.dormi
 		
 		
-	if dormi.color.a >= 1:
-		#temporal 
-		get_tree().reload_current_scene()
-	
+		
+	if sleep.viaje == true:
+		# sera una habitacion por dormise apropocito xd 
+		get_tree().change_scene_to_packed(sleep.castigo)
+		dormi.color.a = 0
+		
+		
+		

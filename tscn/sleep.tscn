@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://script/sleep.gd" id="2_shcks"]
 
 [node name="sleep" type="Sprite2D"]
-position = Vector2(0.999992, 0)
-scale = Vector2(1.73913, 1)
+position = Vector2(102, -97.501)
+scale = Vector2(169.836, 98.9211)
 texture = ExtResource("1_wgyh3")
 script = ExtResource("2_shcks")
 

@@ -31,7 +31,7 @@ func _physics_process(delta):
 
 
 	move_and_slide()
-
+#si esta detro de una area y toca la F pasara lo que tenga que pasar 
 	if Input.is_action_just_pressed("tousch"):
 		emit_signal("touch", inter)
 		

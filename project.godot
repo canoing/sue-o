@@ -11,13 +11,23 @@ config_version=5
 [application]
 
 config/name="sueño"
-run/main_scene="res://tscn/escena_1/dream_1.tscn"
+run/main_scene="res://tscn/escenas/escena_1/dream_1.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
-InteracionGb="*res://script/interacion_gb.gd"
+InteracionGb="*res://script/gb/interacion_gb.gd"
+Dormi="*res://script/gb/dormi_gd.gd"
+Tp="*res://script/gb/tp.gd"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=480
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+window/vsync/vsync_mode=2
 
 [input]
 

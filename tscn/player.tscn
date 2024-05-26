@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://06m51of2rcma"]
+[gd_scene load_steps=5 format=3 uid="uid://06m51of2rcma"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_sgdym"]
+[ext_resource type="PackedScene" uid="uid://c60k7ch86dm6s" path="res://tscn/sleep.tscn" id="2_s7mjy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lwk4y"]
 size = Vector2(40, 40)
@@ -10,6 +11,7 @@ size = Vector2(20, 39)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_sgdym")
+metadata/_edit_horizontal_guides_ = [-779.0]
 
 [node name="sensor" type="Area2D" parent="."]
 
@@ -19,6 +21,13 @@ debug_color = Color(0, 0.556863, 0.894118, 0.419608)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_tvjtq")
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+
+[node name="sleep" parent="Camera2D2" instance=ExtResource("2_s7mjy")]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(1.5, 0.499954)
+scale = Vector2(4.6401, 2.80974)
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
 [connection signal="area_entered" from="sensor" to="." method="_on_sensor_area_entered"]

@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://d01yybbcsuf1r"]
+[gd_scene load_steps=7 format=3 uid="uid://d01yybbcsuf1r"]
 
-[ext_resource type="Script" path="res://script/dream_1.gd" id="1_ip4uo"]
-[ext_resource type="PackedScene" uid="uid://bc0l0ymlc0dsa" path="res://tscn/interaciones.tscn" id="2_4pdn6"]
-[ext_resource type="Script" path="res://script/touchs.gd" id="3_ddnj0"]
-[ext_resource type="PackedScene" uid="uid://06m51of2rcma" path="res://tscn/player.tscn" id="4_0itsc"]
-[ext_resource type="PackedScene" uid="uid://c60k7ch86dm6s" path="res://tscn/sleep.tscn" id="5_h27u1"]
+[ext_resource type="Script" path="res://script/dream_1.gd" id="1_wxget"]
+[ext_resource type="PackedScene" uid="uid://bc0l0ymlc0dsa" path="res://tscn/gb.tscn" id="2_7r3iq"]
+[ext_resource type="Script" path="res://script/touchs.gd" id="3_qnscu"]
+[ext_resource type="PackedScene" uid="uid://06m51of2rcma" path="res://tscn/player.tscn" id="4_xvi6l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_34h1w"]
 size = Vector2(38, 68)
@@ -13,13 +12,13 @@ size = Vector2(38, 68)
 size = Vector2(1121.5, 15)
 
 [node name="dream_1" type="Node"]
-script = ExtResource("1_ip4uo")
+script = ExtResource("1_wxget")
 
-[node name="interaciones" parent="." instance=ExtResource("2_4pdn6")]
+[node name="interaciones" parent="." instance=ExtResource("2_7r3iq")]
 
 [node name="puerta" type="Area2D" parent="interaciones" groups=["interation_T"]]
 position = Vector2(390, 324)
-script = ExtResource("3_ddnj0")
+script = ExtResource("3_qnscu")
 ID_toush = "door_1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interaciones/puerta"]
@@ -29,7 +28,7 @@ debug_color = Color(0, 0.643137, 0.305882, 0.419608)
 
 [node name="puerta_2" type="Area2D" parent="interaciones" groups=["interation_T"]]
 position = Vector2(654, 313)
-script = ExtResource("3_ddnj0")
+script = ExtResource("3_qnscu")
 ID_toush = "door_2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interaciones/puerta_2"]
@@ -39,8 +38,8 @@ debug_color = Color(0, 0.643137, 0.305882, 0.419608)
 
 [node name="perso" type="Node" parent="."]
 
-[node name="player" parent="perso" instance=ExtResource("4_0itsc")]
-position = Vector2(349, 285)
+[node name="player" parent="perso" instance=ExtResource("4_xvi6l")]
+position = Vector2(337, 330)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -48,12 +47,6 @@ position = Vector2(349, 285)
 position = Vector2(289.75, 358.5)
 shape = SubResource("RectangleShape2D_hf1gg")
 debug_color = Color(0.580392, 0.54902, 0.176471, 0.419608)
-
-[node name="sleep" parent="." instance=ExtResource("5_h27u1")]
-self_modulate = Color(1, 1, 1, 0)
-visibility_layer = 8
-position = Vector2(573, 330)
-scale = Vector2(2.85507, 1.61021)
 
 [connection signal="body_entered" from="interaciones/puerta" to="interaciones/puerta" method="_on_body_entered"]
 [connection signal="body_exited" from="interaciones/puerta" to="interaciones/puerta" method="_on_body_exited"]

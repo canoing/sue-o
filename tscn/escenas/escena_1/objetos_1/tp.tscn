@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://blv57p8g284bb"]
+
+[ext_resource type="Texture2D" uid="uid://c1ykpa6fo1q3x" path="res://sprint/end_T.jpg" id="1_oruej"]
+[ext_resource type="Script" path="res://script/objeetos/tp.gd" id="1_ts3jw"]
+
+[node name="tp" type="Node2D"]
+script = ExtResource("1_ts3jw")
+
+[node name="EndT" type="Sprite2D" parent="."]
+position = Vector2(2.38419e-07, 0)
+scale = Vector2(0.0535741, 0.0477315)
+texture = ExtResource("1_oruej")
